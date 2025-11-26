@@ -1,0 +1,74 @@
+# ===========================
+#   Node / Backend
+# ===========================
+
+node_modules/
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Process files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Build output
+dist/
+build/
+.tmp/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# ===========================
+#   Frontend (React)
+# ===========================
+
+# Node modules (again for frontend folder)
+frontend/node_modules/
+
+# Build folders
+frontend/build/
+frontend/dist/
+
+# Local environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+
+# Cache
+frontend/.cache/
+frontend/.vite/
+.vite/
+
+# ===========================
+#   Editor & IDE
+# ===========================
+
+.vscode/
+.idea/
+*.swp
+
+# ===========================
+#   Misc
+# ===========================
+
+*.tar
+*.zip
+*.7z

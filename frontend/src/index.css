@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-300;
+  }
+  
+  html.dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+.nav-item {
+  @apply px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  @apply text-gray-700 hover:bg-gray-100 hover:text-green-600;
+}
+
+html.dark .nav-item {
+  @apply text-gray-300 hover:bg-gray-800 hover:text-green-400;
+}
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+html.dark .custom-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-700;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+html.dark .custom-scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
