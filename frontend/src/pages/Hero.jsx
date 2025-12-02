@@ -113,9 +113,9 @@ export default function Hero() {
                         Smart Waste Management System
                     </div>
 
-                    <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900 dark:text-white tracking-tight">
+                    <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 dark:text-white tracking-tight">
                         Transform Waste <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 dark:from-red-400 dark:via-green-400 dark:to-blue-400">
                             Into Resources
                         </span>
                     </h1>
@@ -128,14 +128,14 @@ export default function Hero() {
                     <div className="hero-buttons flex flex-wrap gap-4">
                         <button
                             onClick={goToDashboard}
-                            className="group flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg shadow-green-600/20 hover:shadow-green-600/40 hover:-translate-y-1"
+                            className="group flex items-center gap-2 cursor-pointer bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg shadow-green-600/20 hover:shadow-green-600/40 hover:-translate-y-1"
                         >
                             Start Your Journey
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
 
                         <button
-                            className="flex items-center gap-2 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-600"
+                            className="flex items-center gap-2 cursor-pointer border-2  border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:-translate-y-1 hover:border-gray-300 dark:hover:border-gray-600"
                         >
                             <PlayCircle className="w-5 h-5" />
                             Watch Demo
@@ -224,7 +224,7 @@ function StatCard({ icon, color, value, label, selector }) {
             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 mx-auto transition-transform group-hover:scale-110 ${colorClasses[color]}`}>
                 {icon}
             </div>
-            <h3 className={`${selector} text-4xl font-extrabold text-gray-900 dark:text-white mb-2`}>{value}</h3>
+            <h3 className={`${selector} text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-green-500 to-blue-500 dark:from-red-400 dark:via-green-400 dark:to-blue-400 mb-2`}>{value}</h3>
             <p className="text-gray-500 dark:text-gray-400 font-medium">{label}</p>
         </div>
     );
